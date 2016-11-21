@@ -3,5 +3,4 @@ pages:
   - Home: index.md
   - About: about.md
   - Test: test.md
-  - README from Notepad++: README.md
 theme: readthedocs
