@@ -1,6 +1,8 @@
 site_name: OHua's Blogger
 pages:
-  - Home: index.md
-  - About: about.md
+  - Home:
+      - 'Section levl 2' :
+          - 'About' : 'about.md'
+          - 'Test' : 'test.md'
   - Test: test.md
-theme: readthedocs
+#theme: readthedocs
