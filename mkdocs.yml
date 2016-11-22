@@ -1,11 +1,25 @@
 site_name: OHua's Blogger
+site_url: https://ohua.github.io/Blogger
+site_description: 一個活在悲慘世界的樂觀青年
+site_author: OHua
+repo_url: https://github.com/OHua/Blogger
 pages:
-  - Home: index.md
+  - Home:
+      - index.md
   - About:
-      - about.md
-  - test.md
-  - README.md
+      - license.md
+
 #theme: readthedocs
-#extra_css: [extra.css]
-#extra_javascript: [extra.js]
 #theme_dir: custom_theme
+
+extra_css:
+    - css/extra.css
+#extra_javascript: [extra.js]
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition:
+
+copyright: Copyright &copy; 2016 <a href="https://github.com/OHua">OHua</a>.
+#google_analytics: ['UA-27795084-5', 'mkdocs.org']
