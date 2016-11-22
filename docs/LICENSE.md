@@ -12,11 +12,11 @@ Themes used under license from the ReadTheDocs projects.
 
 Static Site Generator used under license from the MkDocs projects.
 
-* ReadTheDocs theme - [View license](https://github.com/mkdocs/mkdocs/blob/master/LICENSE).
+* MkDocs - [View license](https://github.com/mkdocs/mkdocs/blob/master/LICENSE).
 
 Many thanks to the authors and contributors of those wonderful projects.
 
-## OHua's Blogger License
+## OHua's Blog License
 
 Copyright © 2016, OHua. All rights reserved.
 

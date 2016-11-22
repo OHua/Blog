@@ -1,8 +1,8 @@
-site_name: OHua's Blogger
-site_url: https://ohua.github.io/Blogger
+site_name: OHua's Blog
+site_url: https://ohua.github.io/Blog
 site_description: 一個活在悲慘世界的樂觀青年
 site_author: OHua
-repo_url: https://github.com/OHua/Blogger
+repo_url: https://github.com/OHua/Blog
 pages:
   - Home:
       - index.md
