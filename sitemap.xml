@@ -3,7 +3,7 @@
 
     
     <url>
-     <loc>/</loc>
+     <loc>https://ohua.github.io/Blog/</loc>
      <lastmod>2016-11-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -12,27 +12,17 @@
     
         
     <url>
-     <loc>/about/</loc>
+     <loc>https://ohua.github.io/Blog/LICENSE/</loc>
      <lastmod>2016-11-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
-    
-
-    
     <url>
-     <loc>/test/</loc>
+     <loc>https://ohua.github.io/Blog/README/</loc>
      <lastmod>2016-11-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-    <url>
-     <loc>/README/</loc>
-     <lastmod>2016-11-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
+        
     
 
 </urlset>
