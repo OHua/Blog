@@ -3,11 +3,8 @@ pages:
   - Home: index.md
   - About:
       - about.md
-  # - Home:
-  #     - 'Section levl 2' :
-  #         - 'About' : 'about.md'
-  #         - 'Test' : 'test.md'
-  - Test: test.md
+  - tset.md
+  - README.md
 #theme: readthedocs
 #extra_css: [extra.css]
 #extra_javascript: [extra.js]
