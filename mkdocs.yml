@@ -3,7 +3,7 @@ pages:
   - Home: index.md
   - About:
       - about.md
-  - tset.md
+  - test.md
   - README.md
 #theme: readthedocs
 #extra_css: [extra.css]
