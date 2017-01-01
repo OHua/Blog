@@ -4,8 +4,7 @@ site_description: 一個活在悲慘世界的樂觀青年
 site_author: OHua
 repo_url: https://github.com/OHua/Blog
 pages:
-  - Home:
-      - index.md
+  - Home: index.md
   - About:
       - LICENSE.md
       - README.md
