@@ -1,4 +1,4 @@
-#Welcome to [OHua's Blogger](https://ohua.github.io/Blogger)
+#Welcome to [OHua's Blog](https://ohua.github.io/Blog)
 
 ---
 
@@ -10,5 +10,5 @@ e.g.
 * [LogDown](http://logdown.com/)
 * [另類 Git blog](https://github.com/lifesinger/blog/issues)
 * [Hexo](https://hexo.io/zh-tw/index.html)
-
+* [GitBook](https://www.gitbook.com/@ohua/dashboard)
 

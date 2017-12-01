@@ -1,1 +1,1 @@
-#Welcome to [OHua's Blogger](https://ohua.github.io/Blogger)
+#Welcome to [OHua's Blog](https://ohua.github.io/Blog)
