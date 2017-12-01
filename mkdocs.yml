@@ -8,6 +8,13 @@ pages:
   - About:
       - LICENSE.md
       - README.md
+  - Content:
+      - 使我感到詭異的Comprehension in Python.md
+      - 資料科學家第一週.md
+      - 資料科學家第二週.md
+      - 資料科學家第三週.md
+      - 資料科學家第四週.md
+      - 成為Python數據分析達人的第一堂課.md
 
 #theme: readthedocs
 #theme_dir: custom_theme

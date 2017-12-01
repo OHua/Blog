@@ -40,5 +40,6 @@ SyntaxError: invalid syntax
 ```
 
 ## 結論
-* 懂 Comprehension 就好，不需要刻意去使用它
+* 挺方便的，「概念簡單」的程式碼可以直接寫成一行完成
+* 懂 Comprehension 就好，不需要刻意去使用它，它不適合用在複雜的結構中且不易讀
 * 若是 for if 內要執行的事情有2個步驟以上，則不適用 Comprehension
