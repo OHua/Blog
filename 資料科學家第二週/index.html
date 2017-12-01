@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="OHua">
-        <link rel="canonical" href="https://ohua.github.io/Blog/README/">
+        <link rel="canonical" href="https://ohua.github.io/Blog/資料科學家第二週/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>README - OHua's Blog</title>
+        <title>資料科學家第二週 - OHua's Blog</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,7 +49,7 @@
                     <li >
                         <a href="..">Home</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -57,12 +57,12 @@
     <a href="../LICENSE/">LICENSE</a>
 </li>
                             
-<li class="active">
-    <a href="./">README</a>
+<li >
+    <a href="../README/">README</a>
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Content <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -74,8 +74,8 @@
     <a href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%80%E9%80%B1/">資料科學家第一週</a>
 </li>
                             
-<li >
-    <a href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%BA%8C%E9%80%B1/">資料科學家第二週</a>
+<li class="active">
+    <a href="./">資料科學家第二週</a>
 </li>
                             
 <li >
@@ -100,12 +100,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../LICENSE/">
+                        <a rel="next" href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%80%E9%80%B1/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">
+                        <a rel="prev" href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%89%E9%80%B1/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -122,21 +122,175 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-ohuas-blogger">Welcome to OHua's Blogger</a></li>
+        <li class="main active"><a href="#_1">資料科學家第二週</a></li>
+            <li><a href="#_2">分類問題與決策樹</a></li>
+            <li><a href="#_3">分類三步驟</a></li>
+            <li><a href="#_4">決策樹的建構</a></li>
+            <li><a href="#_5">補充</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-ohuas-blogger">Welcome to <a href="https://ohua.github.io/Blogger">OHua's Blogger</a><a class="headerlink" href="#welcome-to-ohuas-blogger" title="Permanent link"></a></h1>
-<hr />
-<p>先用 Mkdocs 來建置 bolg 放在 GitHub 的靜態網頁上玩玩，將來打算轉去其他更便利的空間</p>
-<p>e.g.</p>
+<h1 id="_1">資料科學家第二週<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h2 id="_2">分類問題與決策樹<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <ul>
-<li><a href="http://codrspace.com/">codrspace</a></li>
-<li><a href="http://logdown.com/">LogDown</a></li>
-<li><a href="https://github.com/lifesinger/blog/issues">另類 Git blog</a></li>
-<li><a href="https://hexo.io/zh-tw/index.html">Hexo</a></li>
-</ul></div>
+<li>當目標變數為<strong>離散型</strong>時則使用<strong>回歸分析</strong></li>
+<li>當目標變數為<strong>連續型</strong>時則使用<strong>分類決策</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>貸款</th>
+<th>婚姻狀況</th>
+<th>應稅收入</th>
+<th>違約</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><em>屬性集(x1)</em></td>
+<td><em>屬性集(x2)</em></td>
+<td><em>屬性集(x3)</em></td>
+<td><em>類別(y)</em></td>
+</tr>
+<tr>
+<td>1</td>
+<td>是</td>
+<td>單身</td>
+<td>125K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>否</td>
+<td>已婚</td>
+<td>100K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>否</td>
+<td>單身</td>
+<td>70K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>是</td>
+<td>已婚</td>
+<td>120K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>5</td>
+<td>否</td>
+<td>離異</td>
+<td>95K</td>
+<td>是</td>
+</tr>
+<tr>
+<td>6</td>
+<td>否</td>
+<td>已婚</td>
+<td>60K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>7</td>
+<td>是</td>
+<td>離異</td>
+<td>220K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>8</td>
+<td>否</td>
+<td>單身</td>
+<td>85K</td>
+<td>是</td>
+</tr>
+<tr>
+<td>9</td>
+<td>否</td>
+<td>已婚</td>
+<td>75K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>10</td>
+<td>否</td>
+<td>單身</td>
+<td>90K</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-output">分類問題的input output<a class="headerlink" href="#input-output" title="Permanent link"></a></h3>
+<blockquote>
+<p>分類問題最主要目標為，利用這些輸入的屬性集x，透過分類的模型
+( 決策樹 or K最近鄰法 or SVM or 類神經網路 .etc)
+來幫助顧客或分析師預測出這筆資料最後的類別y，即 F(X) → Y</p>
+</blockquote>
+<h2 id="_3">分類三步驟<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
+<ol>
+<li>取得<strong>資料完整</strong>的訓練資料集</li>
+<li>建立分類模型 ( 分類技術 )</li>
+<li>分類樹/決策樹 ( Classification Tree / Decision Tree )</li>
+<li>K最近鄰近點分類法 ( K-Nearest Neighbor )</li>
+<li>類神經網路</li>
+<li>原始貝氏模型與貝氏網路</li>
+<li>支援向量機</li>
+<li>使用測試資料集去驗證分類模型的正確率</li>
+</ol>
+<h2 id="_4">決策樹的建構<a class="headerlink" href="#_4" title="Permanent link"></a></h2>
+<ol>
+<li>使用 <em>Hunt's 演算法</em> 來建構二元樹or多元樹</li>
+<li>如果D{t}為<strong>空集合</strong>，則t為標記預設Y{d}的葉節點</li>
+<li>如果D{t}包含了<strong>相同的類別</strong>，則t為標記Y{t}的葉節點</li>
+<li>如果D{t}包含超過一種類別，將會再使用其他變數切分為更小的子集合，重複此動作，直到D{t}裡只有一種類別</li>
+<li>決策樹的特性</li>
+<li>使用不同的變數順序，會導致不同結構的樹</li>
+<li>不同結構的樹，會有不同的效益<ul>
+<li>正確率不同</li>
+<li>速度不同</li>
+<li>決策樹的分析規則、解釋不同</li>
+</ul>
+</li>
+<li>所以要在建構樹之前找到好的變數順序</li>
+<li>變數順序必須完全排列組合完畢才能找到最佳解 ( 三種變數，則有 <em>3!</em> 種排列組合 )</li>
+<li>使用指標 ( 亂度 )</li>
+<li>吉尼係數 ( Gini Index )<blockquote>
+<p>此項係數愈大，表示所得分配不均等的程度愈高，反之，係數愈小，表示不均等的程度愈低</p>
+</blockquote>
+</li>
+<li>吉尼係數的分割 ( Split Gini index )<blockquote>
+<p>追求同類別資料個數較大較純的分割，各自算完各自的節點亂度，然後乘上數量權重，就是最後的亂度</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>依照屬性集內之變數以特定的順序，一個一個套入Hunt's演算法，並建構出決策樹，變數的先後排序將影響到整體決策樹之效益，故使用指標來判定變數之順序
+1. 選擇變數
+2. 計算指標
+3. 建構決策樹</p>
+</blockquote>
+<h2 id="_5">補充<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<h3 id="_6">順序尺度<a class="headerlink" href="#_6" title="Permanent link"></a></h3>
+<p>資料本身為有序性資料
+<em> 順序尺度內的離散型變數：
+  - 我醜醜 &lt; 我普普 &lt; 我好帥
+  - 好酸 &lt; 略酸 &lt; 普通 &lt; 微甜 &lt; 好甜
+</em> 非順序尺度內的離散型變數：
+  - 豪華型車、家庭型車、運動型車
+  - 圓形、方形、三角形、橢圓形、多邊形
+* 順序尺度內的連續型變數：
+  - 1 &lt; 2 &lt; 3 &lt; 4
+  - 90K &lt; 100K &lt; 120K &lt; 125K &lt; 220K</p>
+<p><img alt="計算吉尼係數(名目變數)" src="../img\資料科學家\計算吉尼係數_名目變數.jpg" />
+<img alt="計算吉尼係數2(名目變數)" src="../img\資料科學家\計算吉尼係數2_名目變數.jpg" />
+<img alt="介武的學習筆記簿" src="../img\資料科學家\介武的學習筆記簿.jpg" /></p></div>
         </div>
 
         <footer class="col-md-12">

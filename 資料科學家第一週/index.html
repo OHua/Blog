@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="OHua">
-        <link rel="canonical" href="https://ohua.github.io/Blog/README/">
+        <link rel="canonical" href="https://ohua.github.io/Blog/資料科學家第一週/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>README - OHua's Blog</title>
+        <title>資料科學家第一週 - OHua's Blog</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,7 +49,7 @@
                     <li >
                         <a href="..">Home</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -57,12 +57,12 @@
     <a href="../LICENSE/">LICENSE</a>
 </li>
                             
-<li class="active">
-    <a href="./">README</a>
+<li >
+    <a href="../README/">README</a>
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Content <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -70,8 +70,8 @@
     <a href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">使我感到詭異的Comprehension in Python</a>
 </li>
                             
-<li >
-    <a href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%80%E9%80%B1/">資料科學家第一週</a>
+<li class="active">
+    <a href="./">資料科學家第一週</a>
 </li>
                             
 <li >
@@ -100,12 +100,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../LICENSE/">
+                        <a rel="next" href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">
+                        <a rel="prev" href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%BA%8C%E9%80%B1/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -122,21 +122,144 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-ohuas-blogger">Welcome to OHua's Blogger</a></li>
+        <li class="main active"><a href="#_1">資料科學家第一週</a></li>
+            <li><a href="#_2">資料分類</a></li>
+            <li><a href="#_3">資料分群</a></li>
+            <li><a href="#weka-utf-8">WEKA 中文 UTF-8 說明</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-ohuas-blogger">Welcome to <a href="https://ohua.github.io/Blogger">OHua's Blogger</a><a class="headerlink" href="#welcome-to-ohuas-blogger" title="Permanent link"></a></h1>
-<hr />
-<p>先用 Mkdocs 來建置 bolg 放在 GitHub 的靜態網頁上玩玩，將來打算轉去其他更便利的空間</p>
-<p>e.g.</p>
+<h1 id="_1">資料科學家第一週<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h2 id="_2">資料分類<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
 <ul>
-<li><a href="http://codrspace.com/">codrspace</a></li>
-<li><a href="http://logdown.com/">LogDown</a></li>
-<li><a href="https://github.com/lifesinger/blog/issues">另類 Git blog</a></li>
-<li><a href="https://hexo.io/zh-tw/index.html">Hexo</a></li>
-</ul></div>
+<li>訓練資料集 - 用以分析出決策樹、模型</li>
+<li>測試資料集 - 用以驗證決策樹與模型的準確性</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>編號</th>
+<th>貸款</th>
+<th>婚姻狀況</th>
+<th>應稅收入</th>
+<th>違約</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td><em>類別型變數</em></td>
+<td><em>類別型變數</em></td>
+<td><em>連續型變數</em></td>
+<td><em>目標變數</em></td>
+</tr>
+<tr>
+<td>1</td>
+<td>是</td>
+<td>單身</td>
+<td>125K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>否</td>
+<td>已婚</td>
+<td>100K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>否</td>
+<td>單身</td>
+<td>70K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>是</td>
+<td>已婚</td>
+<td>120K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>5</td>
+<td>否</td>
+<td>離異</td>
+<td>95K</td>
+<td>是</td>
+</tr>
+<tr>
+<td>6</td>
+<td>否</td>
+<td>已婚</td>
+<td>60K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>7</td>
+<td>是</td>
+<td>離異</td>
+<td>220K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>8</td>
+<td>否</td>
+<td>單身</td>
+<td>85K</td>
+<td>是</td>
+</tr>
+<tr>
+<td>9</td>
+<td>否</td>
+<td>已婚</td>
+<td>75K</td>
+<td>否</td>
+</tr>
+<tr>
+<td>10</td>
+<td>否</td>
+<td>單身</td>
+<td>90K</td>
+<td>是</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>類別型尺度 = 名目尺度 = 離散型尺度</li>
+<li>連續型尺度</li>
+<li>目標變數 ( 可為類別型，也可為連續型，第二週有說明 )</li>
+</ul>
+<h2 id="_3">資料分群<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
+<p>找出資料點之間的關聯，資料點之間相近、相似的一群資料，會有群特性，如以下舉例</p>
+<blockquote>
+<p>洗面乳+毛巾</p>
+<p>牙刷+洗面乳-&gt;牙膏</p>
+</blockquote>
+<p>演算法原則：
+<em> 群內距離<strong>最小化</strong>
+</em> 群間距離<strong>最大化</strong></p>
+<h2 id="weka-utf-8">WEKA 中文 UTF-8 說明<a class="headerlink" href="#weka-utf-8" title="Permanent link"></a></h2>
+<p>報告老師，問題搞定了
+我注意到其實 <em>runweka.ini</em> 內的註解就有寫道以下，並照著做更改即可</p>
+<blockquote>
+<p>The file encoding; use "utf-8" instead of "Cp1252" to display UTF-8 characters in the GUI, e.g., the Explorer fileEncoding=utf-8</p>
+</blockquote>
+<p>做完以上設定後，WEKA 將以 utf-8 的格式來讀取檔案，即可正確讀取中文檔如下圖</p>
+<p><img alt="notepad儲存" src="../img\資料科學家\notepadd儲存.jpg" /></p>
+<p>然而我們在製作 .arff 檔的時候要注意也要記得在儲存時也必須以 utf-8 的格式做儲存
+我使用的編輯器 notepad++ 預設就是使用 utf-8 做編碼儲存檔案
+但若是使用 windows 內建的筆記本，就要在儲存檔案時手動更改編碼方式
+將預設的 ANSI 改成 UTF-8，如下圖所示</p>
+<p><img alt="筆記本儲存" src="../img\資料科學家\筆記本儲存.jpg" /></p>
+<h3 id="_4">結論<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<ol>
+<li>我們製作的資料檔案，存檔時要用 utf-8 存檔</li>
+<li>使用 weka 讀取檔案時，要設定用 utf-8 來讀檔</li>
+</ol>
+<p>優點：使用 utf-8 後，萬國碼可暢行無阻，例如日文</p>
+<p><img alt="筆記本儲存" src="../img\資料科學家\日文測試.jpg" /></p></div>
         </div>
 
         <footer class="col-md-12">

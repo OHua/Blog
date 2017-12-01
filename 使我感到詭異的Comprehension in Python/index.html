@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="OHua">
-        <link rel="canonical" href="https://ohua.github.io/Blog/README/">
+        <link rel="canonical" href="https://ohua.github.io/Blog/使我感到詭異的Comprehension in Python/">
         <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>README - OHua's Blog</title>
+        <title>使我感到詭異的Comprehension in Python - OHua's Blog</title>
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
@@ -49,7 +49,7 @@
                     <li >
                         <a href="..">Home</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
@@ -57,17 +57,17 @@
     <a href="../LICENSE/">LICENSE</a>
 </li>
                             
-<li class="active">
-    <a href="./">README</a>
+<li >
+    <a href="../README/">README</a>
 </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Content <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             
-<li >
-    <a href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">使我感到詭異的Comprehension in Python</a>
+<li class="active">
+    <a href="./">使我感到詭異的Comprehension in Python</a>
 </li>
                             
 <li >
@@ -100,12 +100,12 @@
                     </a>
                 </li>
                     <li >
-                        <a rel="next" href="../LICENSE/">
+                        <a rel="next" href="../README/">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">
+                        <a rel="prev" href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%80%E9%80%B1/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -122,20 +122,53 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#welcome-to-ohuas-blogger">Welcome to OHua's Blogger</a></li>
+        <li class="main active"><a href="#comprehension-in-python">使我感到詭異的Comprehension in Python</a></li>
+            <li><a href="#coding">coding途中記錄下來的五種範例</a></li>
+            <li><a href="#_1">結論</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-ohuas-blogger">Welcome to <a href="https://ohua.github.io/Blogger">OHua's Blogger</a><a class="headerlink" href="#welcome-to-ohuas-blogger" title="Permanent link"></a></h1>
-<hr />
-<p>先用 Mkdocs 來建置 bolg 放在 GitHub 的靜態網頁上玩玩，將來打算轉去其他更便利的空間</p>
-<p>e.g.</p>
+<h1 id="comprehension-in-python">使我感到詭異的Comprehension in Python<a class="headerlink" href="#comprehension-in-python" title="Permanent link"></a></h1>
+<p>這幾天就為了把兩行的程式碼想說改寫成精幹一點的一行搞定，於是一頭栽入了 Python 的 Comprehension，一開始對於語言的美麗感到興奮有趣，隨後慢慢就不這麼想了...</p>
+<h2 id="coding">coding途中記錄下來的五種範例<a class="headerlink" href="#coding" title="Permanent link"></a></h2>
+<pre><code class="python">&gt;&gt;&gt; Aset = ['a','b','c','d','e']
+&gt;&gt;&gt; Bset = ['a','b','x','y','z']
+&gt;&gt;&gt; [ item for item in Aset if item not in Bset ]
+['c','d','e']
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; Aset = ['a','b','c','d','e']
+&gt;&gt;&gt; Bset = ['a','b','x','y','z']
+&gt;&gt;&gt; [ item+':True' if item in Aset else item+':False' for item in Bset ]
+['a:True', 'b:True', 'x:False', 'y:False', 'z:False']
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; Aset = ['a','b','c','d','e']
+&gt;&gt;&gt; Bset = ['a','b','x','y','z']
+&gt;&gt;&gt; print( item+':True' if item in Aset else item+':False' for item in Bset )
+&lt;generator object &lt;genexpr&gt;&gt;&gt; at 0x0000027202AB1990&gt;&gt;&gt;
+&gt;&gt;&gt; print( [ item+':True' if item in Aset else item+':False' for item in Bset ] )
+['a:True', 'b:True', 'x:False', 'y:False', 'z:False']
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; Aset = ['a','b','c','d','e']
+&gt;&gt;&gt; Bset = ['a','b','x','y','z']
+&gt;&gt;&gt; [ item+':True' if item in Aset for item in Bset ]
+SyntaxError: invalid syntax
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; Aset = ['a','b','c','d','e']
+&gt;&gt;&gt; Bset = ['a','b','x','y','z']
+&gt;&gt;&gt; [ item+':True' for item in Bset if item in Aset ]
+['a:True', 'b:True']
+</code></pre>
+
+<h2 id="_1">結論<a class="headerlink" href="#_1" title="Permanent link"></a></h2>
 <ul>
-<li><a href="http://codrspace.com/">codrspace</a></li>
-<li><a href="http://logdown.com/">LogDown</a></li>
-<li><a href="https://github.com/lifesinger/blog/issues">另類 Git blog</a></li>
-<li><a href="https://hexo.io/zh-tw/index.html">Hexo</a></li>
+<li>挺方便的，「概念簡單」的程式碼可以直接寫成一行完成</li>
+<li>懂 Comprehension 就好，不需要刻意去使用它，它不適合用在複雜的結構中且不易讀</li>
+<li>若是 for if 內要執行的事情有2個步驟以上，則不適用 Comprehension</li>
 </ul></div>
         </div>
 

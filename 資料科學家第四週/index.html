@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="OHua">
+        <link rel="canonical" href="https://ohua.github.io/Blog/資料科學家第四週/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>資料科學家第四週 - OHua's Blog</title>
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+        <link href="../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+	
+	<script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="..">OHua's Blog</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../LICENSE/">LICENSE</a>
+</li>
+                            
+<li >
+    <a href="../README/">README</a>
+</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Content <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            
+<li >
+    <a href="../%E4%BD%BF%E6%88%91%E6%84%9F%E5%88%B0%E8%A9%AD%E7%95%B0%E7%9A%84Comprehension%20in%20Python/">使我感到詭異的Comprehension in Python</a>
+</li>
+                            
+<li >
+    <a href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%80%E9%80%B1/">資料科學家第一週</a>
+</li>
+                            
+<li >
+    <a href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%BA%8C%E9%80%B1/">資料科學家第二週</a>
+</li>
+                            
+<li >
+    <a href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%89%E9%80%B1/">資料科學家第三週</a>
+</li>
+                            
+<li class="active">
+    <a href="./">資料科學家第四週</a>
+</li>
+                            
+<li >
+    <a href="../%E6%88%90%E7%82%BAPython%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E9%81%94%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A0%82%E8%AA%B2/">成為Python數據分析達人的第一堂課</a>
+</li>
+                        </ul>
+                    </li>
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                    <li >
+                        <a rel="next" href="../%E8%B3%87%E6%96%99%E7%A7%91%E5%AD%B8%E5%AE%B6%E7%AC%AC%E4%B8%89%E9%80%B1/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../%E6%88%90%E7%82%BAPython%E6%95%B8%E6%93%9A%E5%88%86%E6%9E%90%E9%81%94%E4%BA%BA%E7%9A%84%E7%AC%AC%E4%B8%80%E5%A0%82%E8%AA%B2/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/OHua/Blog">
+                                <i class="fa fa-github"></i>GitHub
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#_1">資料科學家第四週</a></li>
+            <li><a href="#_2">「尺度」的回顧複習與定義加深</a></li>
+            <li><a href="#_3">資料的身分證</a></li>
+            <li><a href="#_4">決策樹常見的三大演算法</a></li>
+            <li><a href="#weka">決策樹演算法在 WEKA 上的實作</a></li>
+            <li><a href="#test-options">Test Options</a></li>
+            <li><a href="#leave-one-out">極端案例 Leave one out</a></li>
+            <li><a href="#cross-validation">Cross Validation</a></li>
+            <li><a href="#classifier-output">Classifier output</a></li>
+            <li><a href="#result-list-right-click-for-options">Result list (right-click for options)</a></li>
+            <li><a href="#_5">補充與注意事項</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="_1">資料科學家第四週<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<h2 id="_2">「尺度」的回顧複習與定義加深<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<ul>
+<li>名目尺度</li>
+<li><strong>無法</strong>使用<strong>加減乘除</strong>處理</li>
+<li>只能計算<strong>次數</strong>以及累積百分比</li>
+<li>屬<strong>質</strong>的，<strong>定性</strong>資料</li>
+<li>又稱<strong>類別尺度</strong></li>
+<li>Ex：婚姻狀況、性別、單眼皮雙眼皮</li>
+</ul>
+<blockquote>
+<p>注意! ID : 定義資料的唯一編號：此為<strong>名目尺度</strong></p>
+</blockquote>
+<ul>
+<li>數值型(連續尺度)</li>
+<li><strong>能夠</strong>使用<strong>加減乘除</strong>處理</li>
+<li>屬<strong>量</strong>的，<strong>定量</strong>資料</li>
+<li>又稱<strong>數值尺度</strong></li>
+<li>Ex：身高、體重、收入、距離</li>
+</ul>
+<h2 id="_3">資料的身分證<a class="headerlink" href="#_3" title="Permanent link"></a></h2>
+<ul>
+<li>資料說明檔內的必要內容</li>
+<li>欄位名稱</li>
+<li>欄位說明</li>
+<li>資料型態</li>
+</ul>
+<h2 id="_4">決策樹常見的三大演算法<a class="headerlink" href="#_4" title="Permanent link"></a></h2>
+<h3 id="cart-classification-and-regression-tree">CART (Classification And Regression Tree)<a class="headerlink" href="#cart-classification-and-regression-tree" title="Permanent link"></a></h3>
+<ul>
+<li>又名分類與迴歸樹</li>
+<li>美國統計學家 <strong>布萊曼Brieman</strong> 於1984年提出</li>
+<li>每次都產生兩個子節點</li>
+<li>應變數(目標變數)與自變數不限制其變數類型</li>
+<li>使用Gini Index</li>
+</ul>
+<h3 id="id3-iterative-dichotomiser-3">ID3 (Iterative Dichotomiser 3)<a class="headerlink" href="#id3-iterative-dichotomiser-3" title="Permanent link"></a></h3>
+<ul>
+<li>澳洲研究者昆蘭Quinlan於1986年提出</li>
+<li>奧卡姆剃刀的理論基礎</li>
+<li>月是小型的決策樹越優於大型的決策樹(簡單理論)</li>
+<li>使用Information Entropy的概念</li>
+<li>使用所有沒有使用的屬性並計算與之相關的樣本Entropy值</li>
+<li>選取其中Entropy值最小的屬性</li>
+<li>生成包含該屬性的節點</li>
+</ul>
+<h3 id="c45">C4.5<a class="headerlink" href="#c45" title="Permanent link"></a></h3>
+<ul>
+<li>澳洲研究者昆蘭Quinlan於1993年提出</li>
+<li>為ID3演算法的擴展版，可以同時處理名目尺度與連續尺度</li>
+<li>使用Entropy</li>
+<li>分割不限二元</li>
+</ul>
+<h2 id="weka">決策樹演算法在 WEKA 上的實作<a class="headerlink" href="#weka" title="Permanent link"></a></h2>
+<ul>
+<li>可以分析數值型資料</li>
+<li>Weka.classifiers.trees.J48<blockquote>
+<p>C4.5用JAVA語言所寫的第八個版本</p>
+</blockquote>
+</li>
+<li>只能分析非數值型資料</li>
+<li>Weka.classifiers.trees.ID3</li>
+</ul>
+<h2 id="test-options">Test Options<a class="headerlink" href="#test-options" title="Permanent link"></a></h2>
+<ul>
+<li>Use training set (訓練資料集)</li>
+<li>Supplied test set (測試驗證資料集)</li>
+<li>Cross-validation</li>
+<li>Folds : 10 ( 代表1/10做驗證，並交叉應用 )</li>
+<li>Percentage split</li>
+<li>% : 70 ( 代表全部的70%做訓練建模，其餘做測試驗證 )</li>
+</ul>
+<h2 id="leave-one-out">極端案例 Leave one out<a class="headerlink" href="#leave-one-out" title="Permanent link"></a></h2>
+<ul>
+<li>交叉驗證的次數 == 資料集的筆數</li>
+</ul>
+<h2 id="cross-validation">Cross Validation<a class="headerlink" href="#cross-validation" title="Permanent link"></a></h2>
+<ul>
+<li>pros</li>
+<li>將可以作為訓練集的資料量使用最大化</li>
+<li>測試集和訓練集完全互斥</li>
+<li>涵蓋所有的資料而使得結果具有代表性</li>
+<li>cons</li>
+<li>計算次數過多，運算的成本過高</li>
+<li>因為每次只有一個測試資料集，因此估計的變異也會過高</li>
+</ul>
+<h2 id="classifier-output">Classifier output<a class="headerlink" href="#classifier-output" title="Permanent link"></a></h2>
+<ul>
+<li>Run Information</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Scheme</td>
+<td>使用的演算法</td>
+</tr>
+<tr>
+<td>Relation</td>
+<td>使用的資料集</td>
+</tr>
+<tr>
+<td>Instances</td>
+<td>資料集內的資料筆數</td>
+</tr>
+<tr>
+<td>Attributes</td>
+<td>資料集內的變數總數、清單列表</td>
+</tr>
+<tr>
+<td>Test mode</td>
+<td>使用的測試選項 (Test option)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Classifier model ( full training set )</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tree</td>
+<td>文字模式下的樹狀圖 (略)</td>
+</tr>
+<tr>
+<td>Number of Leaves</td>
+<td>葉子數量 (無子葉的終結點)</td>
+</tr>
+<tr>
+<td>Size of the tree</td>
+<td>所有節點數量 (包含root、all parent、all child)</td>
+</tr>
+<tr>
+<td>Time taken to build model</td>
+<td>使用訓練資料集的<strong>建模耗費時間(秒)</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Evaluation on test split</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Time taken to test model on training split</td>
+<td>使用測試資料集的驗證耗費時間(秒)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Summary</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correctly Classified Instances</td>
+<td>分類正確數量、分類正確率</td>
+</tr>
+<tr>
+<td>Incorrectly Classified Instances</td>
+<td>分類錯誤數量、分類錯誤率</td>
+</tr>
+<tr>
+<td>Kappa statistic</td>
+<td></td>
+</tr>
+<tr>
+<td>Mean absolute error</td>
+<td></td>
+</tr>
+<tr>
+<td>Root mean squared error</td>
+<td></td>
+</tr>
+<tr>
+<td>Relative absolute error</td>
+<td></td>
+</tr>
+<tr>
+<td>Root relative squared error</td>
+<td></td>
+</tr>
+<tr>
+<td>Total Number of Instances</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Detailed Accuracy By Class</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>TP Rate</th>
+<th>FP Rate</th>
+<th>Precision</th>
+<th>Recall</th>
+<th>F-Measure</th>
+<th>MCC</th>
+<th>ROC Area</th>
+<th>PRC Area</th>
+<th>Class</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>是 True</td>
+</tr>
+<tr>
+<td></td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>否 False</td>
+</tr>
+<tr>
+<td>Weighted Avg.</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Confusion Matrix (含混矩陣)</strong></li>
+<li>用意在於判斷一顆決策樹好或不好</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>&lt;-- classified as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>245</td>
+<td>29</td>
+<td>a</td>
+</tr>
+<tr>
+<td>17</td>
+<td>309</td>
+<td>b</td>
+</tr>
+<tr>
+<td>&gt; * 決策樹認為是 a 類別而資料確實是 a 類別的數量有 245 筆</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* 決策樹認為是 b 類別而資料實際是 a 類別的數量有 29 筆</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* 決策樹認為是 a 類別而資料實際是 b 類別的數量有 17 筆</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>* 決策樹認為是 b 類別而資料確實是 b 類別的數量有 309 筆</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&gt; &gt; 取 Confusion Matrix 計算絕對值，值越大表示樹越好，值越小表示樹越差</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="result-list-right-click-for-options">Result list (right-click for options)<a class="headerlink" href="#result-list-right-click-for-options" title="Permanent link"></a></h2>
+<ul>
+<li>結果列表清單</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>時間</th>
+<th>建模技術</th>
+<th>演算法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>範例1</td>
+<td>17:33:24</td>
+<td>tree</td>
+<td>J48</td>
+</tr>
+<tr>
+<td>解讀1</td>
+<td>下午五點半</td>
+<td>使用分類樹</td>
+<td>C4.5用JAVA語言所寫的第八個版本</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>滑鼠右鍵功能選單</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View in main window</td>
+<td></td>
+</tr>
+<tr>
+<td>View in separate window</td>
+<td></td>
+</tr>
+<tr>
+<td>Save result buffer</td>
+<td></td>
+</tr>
+<tr>
+<td>Delete result buffer</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Load model</td>
+<td>讀取建立好的模型</td>
+</tr>
+<tr>
+<td>Save model</td>
+<td>儲存建立好的模型</td>
+</tr>
+<tr>
+<td><strong>Re-evaluate model on current test set</strong></td>
+<td>用現在現有的這個模型，重新的去評估跟測試新的測試資料集</td>
+</tr>
+<tr>
+<td>Re-apply this model's configuration</td>
+<td></td>
+</tr>
+<tr>
+<td>---</td>
+<td>---</td>
+</tr>
+<tr>
+<td>Visualize classsifier errors</td>
+<td></td>
+</tr>
+<tr>
+<td>Visualize tree</td>
+<td></td>
+</tr>
+<tr>
+<td>Visualize margin curve</td>
+<td></td>
+</tr>
+<tr>
+<td>Visualizethreshold curve</td>
+<td></td>
+</tr>
+<tr>
+<td>CosstBenefit analysis</td>
+<td></td>
+</tr>
+<tr>
+<td>Visualize cost curve</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">補充與注意事項<a class="headerlink" href="#_5" title="Permanent link"></a></h2>
+<ul>
+<li>測試資料集 ---要去配合---&gt; 訓練資料集</li>
+<li>訓練資料集與測試資料集的資料型別需相同，否則會有不相容的狀況無法執行
+*</li>
+</ul></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2016 <a href="https://github.com/OHua">OHua</a>. All rights reserved.</p>
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script><div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
